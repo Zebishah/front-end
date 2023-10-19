@@ -12,11 +12,14 @@ const LogContexts = (props) => {
     let fetchLogs = async () => {
         const response = await fetch(`${host}/api/auth/fetchUser`, {
             method: "GET",
+
             headers: {
                 "Content-Type": "application/json",
             },
 
+
         });
+
         const data = await response.json();
         setUsers(data)
 
