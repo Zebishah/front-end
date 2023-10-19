@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LogContext from "./LogContext";
 
 const LogContexts = (props) => {

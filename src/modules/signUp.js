@@ -20,7 +20,7 @@ const SignUp = () => {
   let [shos, setShos] = useState(false)
   let [dhos, setDhos] = useState(false)
   let Email = useRef(null);
-  let count = 0;
+
   useEffect(() => {
 
     // This effect will run whenever email or pass change in the context
@@ -40,7 +40,7 @@ const SignUp = () => {
       return () => clearTimeout(timerId);
 
     }
-  }, [Logs.email, Logs.pass]);
+  }, [Logs, navigate, Logs.email]);
   let SignUp = async (e) => {
     if (username.current.value.trim() !== '' || Email.current.value.trim() !== '' || password.current.value.trim() !== '') {
       if (username.current.value.trim() === "") {
