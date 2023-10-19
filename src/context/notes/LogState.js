@@ -8,7 +8,7 @@ const LogContexts = (props) => {
 
     let [token, setToken] = useState(null);
 
-    let host = process.env.REACT_APP_API_HOST;
+    let host = process.env.REACT_APP_API_URL
     let fetchLogs = async () => {
         const response = await fetch(`${host}/api/auth/fetchUser`, {
             method: "GET",
