@@ -10,7 +10,7 @@ const LogContexts = (props) => {
 
     let host = process.env.REACT_APP_API_HOST;
     let fetchLogs = async () => {
-        const response = await fetch(`${host}/api/auth/fetchUser`, {
+        const response = await fetch(host + '/api/auth/fetchUser', {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const LogContexts = (props) => {
     }
 
     let sign_up = async (name, Email, Password) => {
-        const response = await fetch(`${host}/api/auth/signUp`, {
+        const response = await fetch(host + `/api/auth/signUp`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const LogContexts = (props) => {
     let sign_in = async (Email, Password) => {
 
 
-        const response = await fetch(`${host}/api/auth/signIn`, {
+        const response = await fetch(host + `/api/auth/signIn`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
