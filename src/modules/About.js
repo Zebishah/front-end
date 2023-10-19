@@ -1,5 +1,5 @@
 import React from 'react'
-
+let host = process.env.REACT_APP_API_HOST;
 let About = () => {
 
   return (
@@ -17,7 +17,7 @@ let About = () => {
           fully-featured Todo App. We hope you find it useful and enjoy using it.
         </p>
         <p className="text-purple-600 mb-4">
-          Name: Syed Zohaib Haider
+          Name: {host}
         </p>
         <p className="text-purple-600 mb-4">
           I am a Mern stack developer
